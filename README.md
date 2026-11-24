@@ -7,7 +7,7 @@ An exploratory analysis of **52,416 electricity readings** taken every 10 minute
 
 > The dataset does not state a unit for consumption. I treated each reading as the average power demand during its 10-minute interval, not as energy used, so all comparisons use **average demand** rather than totals.
 
-![Hourly demand profile](images/03_hourly_profile.png)
+![Hourly demand profile](images/03%20-%20Hourly%20Profile.png)
 
 ## Headline results
 | Measure | Zone 1 | Zone 2 | Zone 3 |
@@ -28,7 +28,7 @@ An exploratory analysis of **52,416 electricity readings** taken every 10 minute
 5. Weekdays are stable. Sunday is the lowest day in Zones 1 and 2, while Zone 3 barely changes across the week.
 6. Temperature is the weather factor most associated with demand, and the link holds within the same hour of day. Humidity and wind speed show only weak associations, largely explained by time of day and season. These are associations, not proof of cause.
 
-![Monthly demand profile](images/05_monthly_profile.png)
+![Monthly demand profile](images/05%20-%20Monthly%20Profile.png)
 
 ## Recommendations
 1. Plan peak capacity and reserves around **19:00 to 22:00 in June to August**, using each zone's own summer evening profile.
@@ -37,7 +37,7 @@ An exploratory analysis of **52,416 electricity readings** taken every 10 minute
 4. Build a **temperature-aware short-term forecast** for each zone, using the hourly and weekly profiles together with weather forecasts.
 5. **Improve the data**: confirm the consumption unit and the meaning of the diffuse flow fields, check the wind sensor, and collect more years of data.
 
-The full analysis is in the [notebook](notebooks/morocco_electricity_analysis.ipynb) and the [report](reports/Morocco_Electricity_Consumption_Report.pdf). The [interactive charts](reports/interactive_charts.html) open in any browser once downloaded.
+The full analysis is in the [notebook](notebooks/Morocco%20Electricity%20Analysis.ipynb) and the [report](reports/Morocco%20Electricity%20Consumption%20Report.pdf). The [interactive charts](reports/Interactive%20Charts.html) open in any browser once downloaded.
 
 ## Data preparation
 - Converted `Datetime` to a date-time type and checked the intervals: every gap is exactly 10 minutes, with 144 readings on each of 364 days. 31 December 2017 is not in the data.
@@ -51,22 +51,22 @@ The full analysis is in the [notebook](notebooks/morocco_electricity_analysis.ip
 ```
 analystlab-morocco-electricity-consumption/
 ├── README.md
-├── requirements.txt
+├── Requirements.txt
 ├── .gitignore
 ├── data/
 │   └── powerconsumption.csv
 ├── notebooks/
-│   └── morocco_electricity_analysis.ipynb
+│   └── Morocco Electricity Analysis.ipynb
 ├── images/
-│   ├── 01_daily_trend.png
-│   ├── 02_zone_average.png
-│   ├── 03_hourly_profile.png
-│   ├── 04_weekday_profile.png
-│   ├── 05_monthly_profile.png
-│   └── 06_environment_correlation.png
+│   ├── 01 - Daily Trend.png
+│   ├── 02 - Zone Average.png
+│   ├── 03 - Hourly Profile.png
+│   ├── 04 - Weekday Profile.png
+│   ├── 05 - Monthly Profile.png
+│   └── 06 - Environment Correlation.png
 └── reports/
-    ├── Morocco_Electricity_Consumption_Report.pdf
-    └── interactive_charts.html
+    ├── Morocco Electricity Consumption Report.pdf
+    └── Interactive Charts.html
 ```
 
 ## How to reproduce
@@ -74,10 +74,10 @@ analystlab-morocco-electricity-consumption/
    ```bash
    git clone https://github.com/adaeudoxie/analystlab-morocco-electricity-consumption.git
    cd analystlab-morocco-electricity-consumption
-   pip install -r requirements.txt
+   pip install -r Requirements.txt
    ```
 2. Optionally, place the supplied `powerconsumption_datadictionary.csv` in `data/`. The notebook displays it when it is present.
-3. Open `notebooks/morocco_electricity_analysis.ipynb` in Jupyter and run all cells. The notebook cleans the data, builds the time features, runs the analysis and regenerates every chart in `images/` and `reports/interactive_charts.html`.
+3. Open `notebooks/Morocco Electricity Analysis.ipynb` in Jupyter and run all cells. The notebook cleans the data, builds the time features, runs the analysis and regenerates every chart in `images/` and `reports/Interactive Charts.html`.
 
 The cleaning runs inside the notebook, so there is no separate cleaned file. Running it rebuilds the analysis-ready dataset from the raw CSV.
 
