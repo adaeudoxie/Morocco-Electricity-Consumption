@@ -49,7 +49,7 @@ The full analysis is in the [notebook](notebooks/Morocco%20Electricity%20Analysi
 
 ## Repository structure
 ```
-analystlab-morocco-electricity-consumption/
+Morocco-Electricity-Consumption/
 ├── README.md
 ├── Requirements.txt
 ├── .gitignore
@@ -72,8 +72,8 @@ analystlab-morocco-electricity-consumption/
 ## How to reproduce
 1. Clone the repository and install the requirements:
    ```bash
-   git clone https://github.com/adaeudoxie/analystlab-morocco-electricity-consumption.git
-   cd analystlab-morocco-electricity-consumption
+   git clone https://github.com/adaeudoxie/Morocco-Electricity-Consumption.git
+   cd Morocco-Electricity-Consumption
    pip install -r Requirements.txt
    ```
 2. Optionally, place the supplied `powerconsumption_datadictionary.csv` in `data/`. The notebook displays it when it is present.
